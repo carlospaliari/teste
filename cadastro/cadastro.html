@@ -1,0 +1,134 @@
+<!doctype html>
+<html ng-app="plunker">
+<head>
+    <title>Cadastro</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="include_date.js"></script>
+    <title>Plunker - http://angular-ui.github.io/bootstrap/</title>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://paliari.url.ph">Paliari</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="http://paliari.url.ph/bd/social/social.html">Social</a></li>
+                <li><a onclick="alert('Desculpe mas esta funcao ainda nao foi desenvolvida')" href="#">Fale conosco</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acesse <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://paliari.url.ph/bd/login/page_login.html">Login</a></li>
+                        <li><a href="http://paliari.url.ph/bd/calculadora/calculadora.html">Calculadora</a></li>
+                        <li><a href="http://paliari.url.ph/bd/calculos_media/index.php">Calculos de media</a></li>
+                        <li><a href="http://paliari.url.ph/bd/mensagens.php">Mensgens</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://paliari.url.ph/">Voltar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+<br><br>
+<br>
+    <div class="col-md-4 col-md-offset-4">
+        Nome Completo
+        <input type="text" class="form-control">
+
+        Email
+        <input type="email" class="form-control" id="inputEmail5" required>
+
+        Senha
+        <input type="text" class="form-control">
+
+        Insira sua senha novamente
+        <input type="text" class="form-control">
+
+        <div class="form-group">
+            Sexo:
+            <br>
+            <input type="radio" name="sexo">Masculino
+            <br>
+            <input type="radio" name="sexo">Feminino
+        </div>
+
+        <div class="date">
+            Date:
+            <div ng-controller="DatepickerDemoCtrl">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="input-group">
+                            <input type="text" class="form-control" datepicker-popup="{{format}}"
+                                   ng-model="dt" is-open="opened"
+                                   min="minDate" max="'2015-06-22'" datepicker-options="dateOptions"
+                                   date-disabled="disabled(date, mode)" ng-required="true"
+                                   close-text="Close"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" ng-click="open($event)">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">Cidade
+                    <select class="form-control">
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">Estado
+                    <select class="form-control">
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">Pa&iacute;s
+                    <select class="form-control">
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+
+
+            <br>
+            Qualidades:
+            <textarea class="form-control"></textarea>
+
+            <div>
+                Confira se o seu cadastro esta de acordo e nos envie
+            </div>
+            <button class="btn btn-primary" type="submit">
+                Enviar
+                <i class="fa fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
     angular.module('plunker', ['ui.bootstrap']);
 var DatepickerDemoCtrl = function ($scope) {
   $scope.today = function() {
-    $scope.dt = new Date();
+    //$scope.dt = new Date(); //serve para já iniciar com a date do dia.
       $scope.toggleMin = function() {
           $scope.minDate = ( $scope.minDate );
       };
@@ -9,6 +9,7 @@ var DatepickerDemoCtrl = function ($scope) {
   };
   $scope.today();
 
+/*
   $scope.showWeeks = true;
   $scope.toggleWeeks = function () {
     $scope.showWeeks = ! $scope.showWeeks;
@@ -22,6 +23,7 @@ var DatepickerDemoCtrl = function ($scope) {
   $scope.disabled = function(date, mode) {
     return ( mode === 'day' && ( date.getDay() === null) );
   };
+*/
 
   $scope.toggleMin();
 
@@ -32,10 +34,12 @@ var DatepickerDemoCtrl = function ($scope) {
     $scope.opened = true;
   };
 
+/*
   $scope.dateOptions = {
     'year-format': "'yy'",
     'starting-day': 1
   };
+*/
 
   $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
   $scope.format = $scope.formats[0];

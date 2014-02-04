@@ -1,0 +1,132 @@
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/UPoQiWA/2/edit
+-->
+<head>
+    <title>New Page</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <style id="jsbin-css">
+        body{
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://paliari.url.ph">Paliari</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="http://paliari.url.ph/bd/social/social.html">Social</a></li>
+            <li><a onclick="alert('Desculpe mas esta funcao ainda nao foi desenvolvida')" href="#">Fale conosco</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acesse <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://paliari.url.ph/bd/login/page_login.html">Login</a></li>
+                    <li><a href="http://paliari.url.ph/bd/calculos_media/index.php">Calculos de media</a></li>
+                    <li><a href="http://paliari.url.ph/bd/mensagens.php">Mensgens</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://paliari.url.ph/">Voltar</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+<br><br>
+<br>
+<div class="container">
+    <form role="form">
+        <div class="form-group">
+            <label for="n1">Primeiro número</label>
+            <input type="number" name="n1" class="form-control" id="n1" placeholder="Insira o primeiro número">
+        </div>
+
+        <div class="form-group">
+            <label for="n2">Segundo Número</label>
+            <input type="number" name="n2" class="form-control" id="n2" placeholder="Insira o segundo número">
+        </div>
+
+        <div class="form-group">
+            <label></label>
+            <input value="+" type="radio" name="operacao">Soma
+            <input value="-" type="radio" name="operacao">Subtração
+            <input value="/" type="radio" name="operacao">Divisão
+            <input value="*" type="radio" name="operacao">Multiplicação
+        </div>
+
+        <div class="form-group">
+            <label for="resultado">Resposta do calculo</label>
+            <input type="number" name="resultado" class="form-control" id="resultado" placeholder="Resultado">
+        </div>
+
+        <a href="#" class="btn btn-primary">Calcular</a>
+    </form>
+</div>
+<script>
+    var calculos;
+
+    calculos = function(n1, n2, operacao) {
+        console.log(n1, n2, operacao);
+        if (operacao === "+") {
+            return n1 + n2;
+        }
+        if (operacao === "-") {
+            return n1 - n2;
+        }
+        if (operacao === "/") {
+            return n1 / n2;
+        }
+        if (operacao === "*") {
+            return n1 * n2;
+        }
+    };
+
+    $('.btn').click(function() {
+        var ope, resultado, v1, v2;
+
+        v1 = Number($('input[name=n1]').val());
+        v2 = Number($('input[name=n2]').val());
+        ope = $('input[type=radio]:checked').val();
+        resultado = $('input[name=resultado]');
+        return resultado.val(calculos(v1, v2, ope));
+    });
+</script>
+<script src="http://static.jsbin.com/js/render/edit.js"></script>
+<script>jsbinShowEdit({"root":"http://static.jsbin.com","csrf":"rXK+CQmnvZe9hutx/o+Dk5of"});</script>
+<script src="http://static.jsbin.com/js/vendor/eventsource.js?3.8.10"></script>
+<script src="http://static.jsbin.com/js/spike.js?3.8.10"></script>
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1656750-34']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+    })();
+</script>
+</body>
+
+</html>
