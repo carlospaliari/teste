@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="icons.png">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="teste_css.css">
+    <link rel="stylesheet" type="text/css" href="acesso_login/login_insere.php">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -14,7 +15,6 @@
 </head>
 
 <body>
-
 
     <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,14 +64,14 @@
                     <div>Esta area ainda esta em desenvolvimento</div>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form">
+                    <form method="post" action="acesso_login/login_insere.php" class="form-horizontal" role="form">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-3 control-label">
                                 Email
                             </label>
 
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+                                <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -79,7 +79,7 @@
                                 Password</label>
 
                             <div class="col-sm-9">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password"
+                                <input type="password" name="senha" class="form-control" id="inputPassword3" placeholder="Password"
                                        required>
                             </div>
                         </div>
